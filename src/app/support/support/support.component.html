@@ -1,0 +1,51 @@
+<div class="example-container">
+  <h1>Support</h1>
+  <form class="example-form" [formGroup]="formGroup">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="phoneNumber" required>
+      <mat-error
+        *ngIf="(getControls()['phoneNumber'].invalid && (getControls()['phoneNumber'].dirty || getControls()['phoneNumber'].touched))">
+        {{getNumberMessage()}}</mat-error>
+    </mat-form-field>
+    <br> <br>
+
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" required>
+      <mat-error
+        *ngIf="(getControls()['email'].invalid && (getControls()['email'].dirty || getControls()['email'].touched))">
+        {{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <br> <br>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Problem</mat-label>
+      <input matInput formControlName="problemTitle" required>
+      <mat-error *ngIf=" (getControls()['problemTitle'].dirty || getControls()['problemTitle'].touched)">
+        {{getPasswordMessage()}}</mat-error>
+    </mat-form-field>
+    <br> <br>
+
+    <section class="example-section">
+      <p>
+        <mat-checkbox class="checkBox" formControlName="checkboxField" (change)="checkBox($event)">Check to add comment
+        </mat-checkbox>
+      </p>
+    </section>
+    <mat-form-field class="example-full-width" appearance="outline"
+      *ngIf="getControls()['checkboxField'].value == true">
+      <mat-label>Comment</mat-label>
+      <input matInput placeholder="comment" formControlName="comment" required>
+      <mat-error *ngIf="(getControls()['comment'].dirty  || getControls()['comment'].touched)">{{getCommentMessage()}}
+      </mat-error>
+    </mat-form-field>
+
+    <div class="row">
+      <div class="col mb-2 d-grid">
+        <button mat-button class="light-button" color="primary" [disabled]="formGroup.invalid">Save</button>
+      </div>
+    </div>
+  </form>
+</div>

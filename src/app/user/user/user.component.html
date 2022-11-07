@@ -1,0 +1,70 @@
+<!-- <table class="inputTable" cellspacing="0">
+  <tr>
+    <td> -->
+      <div class="example-container">
+        <form class="example-form">
+          <!-- <mat-form-field appearance="fill">
+        <input matInput placeholder="Simple placeholder" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Both a label and a placeholder</mat-label>
+        <input matInput placeholder="Simple placeholder">
+      </mat-form-field> -->
+  
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>First name</mat-label>
+        <input type="text" matInput [ngModelOptions]="{standalone: true}"  [(ngModel)]="_name">
+      </mat-form-field>
+      <mat-form-field class=" full-width" appearance="outline">
+        <mat-label>Age</mat-label>
+        <input type="number" matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="_age">
+      </mat-form-field>
+      <!-- <span class="demo-button"> -->
+      <button mat-raised-button (click)="filter()" [disabled]="age == undefined && name ==undefined"
+        class="demo-button">
+        <i class="fa fa-filter fa-1x" aria-hidden="true"></i>
+      </button>
+      <button mat-raised-button (click)="reset()" [disabled]="!hasFiltered" class="demos-button">
+        <i class="fa fa-times fa-1x" aria-hidden="true"></i>
+      </button>
+    <!-- </span> -->
+      </form>
+    </div>
+
+<div class="container">
+  <ng-container>
+    <table mat-table [dataSource]="allUsers$" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let user">{{ user.name}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="surname">
+        <th mat-header-cell *matHeaderCellDef>Surname</th>
+        <td mat-cell *matCellDef="let user">{{user.surname}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef>Age</th>
+        <td mat-cell *matCellDef="let user">{{ user.dateOfBirth | customDatePipe}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef>Address</th>
+        <td mat-cell *matCellDef="let user">{{user.address.houseNum}} {{user.address.street}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+    </table>
+  </ng-container>
+</div>
+
+<pre></pre>
+<pre></pre>
+
+<div class="support">
+  <a routerLink="support" routerLinkActive="active" ariaCurrentWhenActive="page">Support Link</a>
+</div>

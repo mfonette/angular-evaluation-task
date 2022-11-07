@@ -1,0 +1,61 @@
+div{
+    text-align: center;
+}
+
+.invalid-feedback{
+    color: red;
+}
+
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  :host {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border-width: .25em;  
+    border-style:solid;  
+    padding: 20px;
+    border: 1px solid;
+    border-color: #7f7f7f;
+    border-radius: 20px;
+    box-shadow: 5px 5px #e8e8e8;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .example-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+
+  .light-button {
+    height: 50px; 
+    width: 150px;
+    font-size: 110%;
+    color: white !important;
+    background-color: rgb(54, 115, 206);
+} 
+
+.light-button:disabled,
+.light-button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.checkBox {
+    color: #656565;
+}
