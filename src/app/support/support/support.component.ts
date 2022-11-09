@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-support',
@@ -19,6 +19,8 @@ export class SupportComponent implements OnInit {
     this.getErrorMessage();
   }
 
+  // get controls
+  // you could use this and use controls.name instead of getControls().name
   getControls() {
     return this.formGroup.controls;
   }
@@ -30,9 +32,11 @@ getNumberMessage() {
     } 
   }
   else if(this.getControls()['phoneNumber'].hasError('maxLength')) {
-    return 'max lenth of 12'
+    return 'max length of 12'
   }
-  return this.getControls()['phoneNumber'].hasError('pattern') ? 'invalid pattern' : '';
+  else{
+    return this.getControls()['phoneNumber'].hasError('pattern') ? 'invalid pattern' : '';
+  }
 }
 
 getPasswordMessage() {
@@ -85,14 +89,18 @@ getPasswordMessage() {
         checkboxField: [
           false
         ],
-        comment:[
-          '',
-        ]
     })
     console.log(this.formGroup)
   }
 
   checkBox(e: any){
+    if (e.checked  == true){
+      const validators = [ Validators.required];
+        this.formGroup.addControl('comment', new FormControl('', validators));
+    }
+    else{
+      this.formGroup.removeControl('comment')
+    }
     console.log(e.checked)
-  }
+  }
 }

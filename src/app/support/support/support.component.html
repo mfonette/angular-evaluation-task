@@ -22,7 +22,7 @@
 
     <mat-form-field class="example-full-width" appearance="outline">
       <mat-label>Problem</mat-label>
-      <input matInput formControlName="problemTitle" required>
+      <input matInput formControlName="problemTitle">
       <mat-error *ngIf=" (getControls()['problemTitle'].dirty || getControls()['problemTitle'].touched)">
         {{getPasswordMessage()}}</mat-error>
     </mat-form-field>
