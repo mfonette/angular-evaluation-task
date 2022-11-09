@@ -1,36 +1,21 @@
-<!-- <table class="inputTable" cellspacing="0">
-  <tr>
-    <td> -->
-      <div class="example-container">
-        <form class="example-form">
-          <!-- <mat-form-field appearance="fill">
-        <input matInput placeholder="Simple placeholder" required>
-      </mat-form-field>
-  
-      <mat-form-field appearance="fill">
-        <mat-label>Both a label and a placeholder</mat-label>
-        <input matInput placeholder="Simple placeholder">
-      </mat-form-field> -->
-  
-      <mat-form-field class="example-full-width" appearance="outline">
-        <mat-label>First name</mat-label>
-        <input type="text" matInput [ngModelOptions]="{standalone: true}"  [(ngModel)]="_name">
-      </mat-form-field>
-      <mat-form-field class=" full-width" appearance="outline">
-        <mat-label>Age</mat-label>
-        <input type="number" matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="_age">
-      </mat-form-field>
-      <!-- <span class="demo-button"> -->
-      <button mat-raised-button (click)="filter()" [disabled]="age == undefined && name ==undefined"
-        class="demo-button">
-        <i class="fa fa-filter fa-1x" aria-hidden="true"></i>
-      </button>
-      <button mat-raised-button (click)="reset()" [disabled]="!hasFiltered" class="demos-button">
-        <i class="fa fa-times fa-1x" aria-hidden="true"></i>
-      </button>
-    <!-- </span> -->
-      </form>
-    </div>
+<div class="example-container">
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>First name</mat-label>
+      <input type="text" matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="_name">
+    </mat-form-field>
+    <mat-form-field class=" full-width" appearance="outline">
+      <mat-label>Age</mat-label>
+      <input type="number" matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="_age">
+    </mat-form-field>
+    <button mat-raised-button (click)="filter()" [disabled]="age == undefined && name ==undefined" class="demo-button">
+      <i class="fa fa-filter fa-1x" aria-hidden="true"></i>
+    </button>
+    <button mat-raised-button (click)="reset()" [disabled]="!hasFiltered" class="demos-button">
+      <i class="fa fa-times fa-1x" aria-hidden="true"></i>
+    </button>
+  </form>
+</div>
 
 <div class="container">
   <ng-container>

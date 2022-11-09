@@ -7,10 +7,8 @@
    
   }
   
-  
   .demo-button {
     margin-left: 28em;
-    /* padding: 2em; */
   }
 
   .demos-button{
@@ -24,12 +22,10 @@
   }
   
   .example-full-width {
-    /* width: 70%; */
     margin-left: 15em;
   }
 
   .full-width {
-    /* width: 70%; */
     margin-left: 5em;
   }
   
@@ -91,10 +87,6 @@
         margin-left: 8em;
         margin-bottom: 2em;
       }
-
-      .demos-button{
-        /* margin-left: -20em; */
-      }
   }
 
   @media (min-width: 378px) and (max-width: 767px) {
@@ -107,14 +99,11 @@
     }
 
     .example-full-width {
-        /* width: 70%; */
         margin-left: 0em;
         padding-left: 4em;
-        /* align-content: center; */
       }
     
       .full-width {
-        /* width: 70%; */
         margin-left: 0em;
         padding-left: 4em;
       }
@@ -127,7 +116,6 @@
       .demo-button {
         margin-left: 5.6em;
         margin-bottom: 2em;
-        /* padding: 0em; */
       }
   }
 
@@ -142,14 +130,11 @@
     }
 
     .example-full-width {
-        /* width: 70%; */   
         margin-left: 2em;
         padding-left: 4em;
-        /* align-content: center; */
       }
 
       .full-width {
-        /* width: 70%; */
         margin-left: -3em;
         padding-left: 4em;
       }
@@ -157,7 +142,6 @@
     .demo-button {
         margin-left: 1em;
         margin-bottom: 2em;
-        /* padding: 0em; */
       }
    
   }
@@ -170,6 +154,5 @@
     .demo-button {
         margin-left: 1em;
         margin-bottom: 2em;
-        /* padding: 0em; */
       }
   }

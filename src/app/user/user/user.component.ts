@@ -89,7 +89,7 @@ export class UserComponent implements OnInit {
     return this.name
   }
 
-  // setting the name from component and i think its only used for 2 way binding
+  // setting the name from component
   set _name(val: string) {
     this.name = val;
   }
