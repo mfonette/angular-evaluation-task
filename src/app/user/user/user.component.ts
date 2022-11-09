@@ -51,7 +51,6 @@ export class UserComponent implements OnInit {
    const filteredUser = of(this.users).pipe(
       map(x => x.filter(  
         (data) => {
-          console.log(data)
           if (b != undefined && a != undefined && a.length > 0) {
             return (data.name.includes(a) || this.customdatePipe.transform(data.dateOfBirth) == b)
           }
@@ -66,7 +65,6 @@ export class UserComponent implements OnInit {
       ))).subscribe({
         next:e=>{
           this.populateTable(e)
-          console.log(e)
         }
       })
     this.hasFiltered = true;

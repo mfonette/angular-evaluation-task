@@ -90,7 +90,6 @@ getPasswordMessage() {
           false
         ],
     })
-    console.log(this.formGroup)
   }
 
   checkBox(e: any){
@@ -101,6 +100,5 @@ getPasswordMessage() {
     else{
       this.formGroup.removeControl('comment')
     }
-    console.log(e.checked)
   }
 }
