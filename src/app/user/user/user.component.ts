@@ -46,16 +46,16 @@ export class UserComponent implements OnInit {
 
   // filter name and age
   filter() {
-    let a = this._name.toLowerCase();
+    let a = this._name;
     let b = this._age;
    const filteredUser = of(this.users).pipe(
       map(x => x.filter(  
         (data) => {
           if (b != undefined && a != undefined && a.length > 0) {
-            return (data.name.includes(a) || this.customdatePipe.transform(data.dateOfBirth) == b)
+            return (data.name.includes(a.toLowerCase()) || this.customdatePipe.transform(data.dateOfBirth) == b)
           }
           else if (a != undefined && a.length > 0) {
-            return data.name.includes(a)
+            return data.name.includes(a.toLowerCase())
           }
           else if (b != undefined) {
             return this.customdatePipe.transform(data.dateOfBirth) == b
